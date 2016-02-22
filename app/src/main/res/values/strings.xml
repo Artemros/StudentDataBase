@@ -3,4 +3,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_group">GroupActivity</string>
+    <string name="title_activity_student">StudentActivity</string>
+    <string name="toStudentActivityButton">Управление группами</string>
+    <string name="toGroupActivityButton">Управление студентами</string>
+    <string name="title_activity_personal_informations">PersonalInformationsActivity</string>
 </resources>
