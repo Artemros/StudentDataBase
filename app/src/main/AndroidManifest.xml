@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.artem.studentdatabase" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -8,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,20 +20,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GroupActivity"
-            android:label="@string/title_activity_group" >
+            android:name=".activity.GroupActivity"
+            android:label="@string/title_activity_group"
+            android:parentActivityName=".activity.MainActivity">
         </activity>
         <activity
-            android:name=".StudentActivity"
-            android:label="@string/title_activity_student" >
+            android:name=".activity.StudentActivity"
+            android:label="@string/title_activity_student"
+            android:parentActivityName=".activity.MainActivity">
+
         </activity>
         <activity
-            android:name=".PersonalInformationsActivity"
+            android:name=".activity.PersonalInformationsActivity"
             android:label="@string/title_activity_personal_informations"
-            android:parentActivityName=".StudentActivity" >
+            android:parentActivityName=".activity.StudentActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.artem.studentdatabase.StudentActivity" />
+                android:value=".activity.StudentActivity" />
+        </activity>
+        <activity
+            android:name=".activity.GroupInformatonsActivity"
+            android:label="@string/title_activity_group_informatons"
+            android:parentActivityName=".activity.GroupActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.GroupActivity" />
         </activity>
     </application>
 
